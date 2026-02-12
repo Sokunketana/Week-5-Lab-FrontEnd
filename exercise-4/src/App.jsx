@@ -10,9 +10,17 @@ function App() {
       </header>
       <main>
         <section className="places-category">
-          <ul className="places">
-            {/* For each place from AVAILABLE_PLACES, create a Place component */}
-          </ul>
+            <ul className="places">
+              {/* For each place from AVAILABLE_PLACES, create a Place component */}
+            {AVAILABLE_PLACES.map((p) => (
+              <Place
+                key={p.id}
+                id={p.id}
+                title={p.title}
+                image={p.image}
+              />
+            ))}
+            </ul>
         </section>
       </main>
     </>
